@@ -122,3 +122,12 @@ class DataCleaning:
     def __init__(self, data: pd.DataFrame, strategy: DataStrategy):
         self.data = data
         self.strategy = strategy
+
+    def handle_data(self) -> Union[pd.DataFrame, pd.Series]:
+        try:
+            return self.strategy.handle_data(self.data)
+        except Exception as e:
+            logging.error("Error in handling data{}".format(e))
+            raise e
+
+
