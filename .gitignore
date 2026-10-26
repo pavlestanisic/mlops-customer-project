@@ -1,0 +1,9 @@
+.venv/
+.zen/
+.aws/
+.codex/
+.agents/
+__pycache__/
+*.py[cod]
+.env
+saved_model/
